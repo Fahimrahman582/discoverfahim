@@ -30,6 +30,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin-right: 20px;
+            border: 5px solid #4CAF50;
         }
         .container {
             display: flex;
@@ -39,20 +40,21 @@
         }
         .link {
             text-decoration: none;
-            color: #000;
+            color: #fff;
             font-size: 1.5em;
             display: flex;
             align-items: center;
             gap: 10px;
-            background-color: #fff;
+            background-color: #4CAF50;
             padding: 10px 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
         }
         .link:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #45a049;
         }
         .link img {
             width: 30px;
@@ -93,6 +95,14 @@
         <a class="link" href="https://wa.me/+8801834147344/" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
             WhatsApp
+        </a>
+        <a class="link" href="mailto:fahimrahman582@gmail.com" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/previews/002/302/430/non_2x/mail-icon-with-long-shadow-black-on-white-background-simple-design-style-illustration-free-vector.jpg" alt="Email">
+            Email
+        </a>
+        <a class="link" href="tel:+8801834147344" target="_blank">
+            <img src="https://cdn.pixabay.com/photo/2021/10/29/21/40/phone-icon-6753051_960_720.png" alt="Phone Num">
+            Call Me 
         </a>
     </div>
 </body>

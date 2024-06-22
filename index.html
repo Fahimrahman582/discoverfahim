@@ -16,7 +16,7 @@
             align-items: center;
         }
         h1 {
-            color: #333;
+            color: #ff6347;
             margin-left: 20px;
         }
         .top {
@@ -30,7 +30,6 @@
             border-radius: 50%;
             object-fit: cover;
             margin-right: 20px;
-            border: 5px solid #4CAF50;
         }
         .container {
             display: flex;
@@ -54,11 +53,22 @@
         .link:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            background-color: #45a049;
         }
         .link img {
             width: 30px;
             height: 30px;
+        }
+        .link:nth-child(odd) {
+            background-color: #ff6347;
+        }
+        .link:nth-child(even) {
+            background-color: #1e90ff;
+        }
+        .link:nth-child(odd):hover {
+            background-color: #ff4500;
+        }
+        .link:nth-child(even):hover {
+            background-color: #1c86ee;
         }
     </style>
 </head>
@@ -96,7 +106,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
             WhatsApp
         </a>
-        <a class="link" href="mailto:fahimrahman582@gmail.com" target="_blank">
+        <a class="link" href="mailto:fahimrahman582@gmail.com/" target="_blank">
             <img src="https://static.vecteezy.com/system/resources/previews/002/302/430/non_2x/mail-icon-with-long-shadow-black-on-white-background-simple-design-style-illustration-free-vector.jpg" alt="Email">
             Email
         </a>

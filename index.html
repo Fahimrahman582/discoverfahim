@@ -1,163 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect With Fahim Rahman</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <!-- Add this line to include your favicon -->
-    <link rel="icon" type="image/jpeg" href="1719079830400.jpg">
-    <style>
-        body {
-            font-family: 'Bangers', sans-serif;
-            background: sergey-pesterev-tMvuB9se2uQ-unsplash (1).jpg;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1 {
-            color: #fff;
-            margin-left: 20px;
-        }
-        .top {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 20px;
-            border: 5px solid #fff;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .link {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.5em;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background-color: #000;
-            padding: 10px 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-        }
-        .link:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            background-color: #333;
-        }
-        .link img {
-            width: 30px;
-            height: 30px;
-        }
-        .link-facebook {
-            background-color: #3b5998;
-        }
-        .link-instagram {
-            background-color: #e1306c;
-        }
-        .link-youtube {
-            background-color: #ff0000;
-        }
-        .link-twitter {
-            background-color: #242A29;
-        }
-        .link-github {
-            background-color: #333;
-        }
-        .link-telegram {
-            background-color: #0088cc;
-        }
-        .link-whatsapp {
-            background-color: #25d366;
-        }
-        .link-email {
-            background-color: #d44638;
-        }
-        .link-phone {
-            background-color: #577192;
-        }
-        .link-redirect {
-            background-color: #FF5733;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connect With Fahim Rahman</title>
+  <link rel="icon" type="image/jpeg" href="1719079830400.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff512f;
+      --secondary: #dd2476;
+      --accent: #1fa2ff;
+      --glass-bg: rgba(255,255,255,0.18);
+      --glass-border: rgba(255,255,255,0.3);
+      --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--primary), var(--accent), var(--secondary));
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* Abstract SVG background shape */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -100px; left: -100px;
+      width: 120vw; height: 120vh;
+      z-index: 0;
+      background: url('https://svgshare.com/i/14Vh.svg') no-repeat center/cover;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+    .main-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 40px 16px 32px 16px;
+    }
+    .profile-card {
+      background: var(--glass-bg);
+      border: 1.5px solid var(--glass-border);
+      box-shadow: var(--shadow);
+      border-radius: 32px;
+      padding: 36px 28px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 38px;
+      max-width: 400px;
+      width: 100%;
+      backdrop-filter: blur(7px);
+      animation: fadeIn 1.2s cubic-bezier(.33,.98,.46,.99);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px);}
+      to   { opacity: 1; transform: none;}
+    }
+    .profile-card img.profile-pic {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.09);
+      margin-bottom: 20px;
+    }
+    .profile-card h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.3rem;
+      color: var(--primary);
+      letter-spacing: 1.2px;
+      margin: 0 0 6px 0;
+      text-shadow: 0 3px 18px #fff8;
+      text-align: center;
+    }
+    .profile-card p {
+      color: #58606b;
+      font-size: 1.07rem;
+      margin: 0 0 6px 0;
+      text-align: center;
+    }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin-bottom: 18px;
+      z-index: 2;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: transform 0.20s, box-shadow 0.18s, background 0.25s;
+      font-size: 1.33rem;
+      border: none;
+      outline: none;
+    }
+    .social-link img {
+      width: 28px;
+      height: 28px;
+      display: block;
+    }
+    .social-link:hover {
+      transform: translateY(-6px) scale(1.13);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.17);
+    }
+    /* Individual social colors */
+    .facebook { background: #1877f2; }
+    .instagram { background: linear-gradient(45deg,#fd5,#f15,#b32e90); }
+    .youtube { background: #ff0000; }
+    .twitter { background: #222; }
+    .github { background: #333; }
+    .telegram { background: #0088cc; }
+    .whatsapp { background: #25d366; }
+    .email { background: #d44638; }
+    .phone { background: #577192;}
+    .portfolio { background: var(--primary); }
+    .social-link.facebook:hover { background: #1451a3; }
+    .social-link.instagram:hover { background: #e94057; }
+    .social-link.youtube:hover { background: #c10000; }
+    .social-link.twitter:hover { background: #111; }
+    .social-link.github:hover { background: #222; }
+    .social-link.telegram:hover { background: #005577; }
+    .social-link.whatsapp:hover { background: #1fa855; }
+    .social-link.email:hover { background: #a13a2d; }
+    .social-link.phone:hover { background: #314f6c; }
+    .social-link.portfolio:hover { background: #c02520; }
+    /* Contact Form */
+    .contact-form-wrapper {
+      margin: 39px 0 0 0;
+      width: 100%;
+      max-width: 430px;
+      background: var(--glass-bg);
+      border: 1.5px solid var(--glass-border);
+      box-shadow: var(--shadow);
+      border-radius: 30px;
+      backdrop-filter: blur(7px);
+      padding: 30px 28px 24px 28px;
+      animation: fadeIn 1.7s cubic-bezier(.33,.98,.46,.99);
+    }
+    .contact-form-wrapper h2 {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      color: var(--secondary);
+      margin-bottom: 15px;
+      font-size: 2rem;
+      letter-spacing: 1.1px;
+    }
+    form.pageclip-form label {
+      display: block;
+      color: #3d4251;
+      font-weight: 600;
+      margin-bottom: 7px;
+      margin-top: 18px;
+      font-size: 1.04rem;
+    }
+    form.pageclip-form input,
+    form.pageclip-form textarea {
+      width: 100%;
+      padding: 10px 13px;
+      border-radius: 7px;
+      border: 1.3px solid #e5e7eb;
+      background: rgba(255,255,255,0.8);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      transition: border 0.2s;
+    }
+    form.pageclip-form input:focus,
+    form.pageclip-form textarea:focus {
+      border: 1.7px solid var(--primary);
+      outline: none;
+    }
+    form.pageclip-form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    form.pageclip-form button.pageclip-form__submit {
+      margin-top: 22px;
+      width: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.12rem;
+      font-weight: 700;
+      padding: 13px 0;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.11);
+      transition: background 0.2s, transform 0.18s;
+    }
+    form.pageclip-form button.pageclip-form__submit:hover {
+      background: linear-gradient(90deg, #dd2476, #ff512f);
+      transform: scale(1.03);
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .main-container { padding: 20px 3vw 16px 3vw; }
+      .profile-card, .contact-form-wrapper { padding: 20px 8px 18px 8px; }
+      .profile-card h1 { font-size: 1.5rem; }
+      .contact-form-wrapper h2 { font-size: 1.2rem; }
+      .social-link { width: 44px; height: 44px; font-size: 1.03rem; }
+      .social-link img { width: 22px; height: 22px; }
+    }
+  </style>
 </head>
 <body>
-    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="fahimblogs" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fahimblogs" data-description="Support me on Buy me a coffee!" data-message="" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-    <div class="top">
-        <img class="profile-pic" src="1719079830400.jpg" alt="Your Profile Picture">
-        <h1>Connect With Fahim Rahman</h1>
+  <div class="main-container">
+    <div class="profile-card">
+      <img class="profile-pic" src="1719079830400.jpg" alt="Fahim Rahman">
+      <h1>Fahim Rahman</h1>
+      <p>Welcome! Connect with me on your favorite platforms or send a direct message below.</p>
     </div>
-    <div class="container"><p>
-        <a class="link link-redirect" href="https://fahimblogs.com" target="_blank">
-            <img src="cropped-output-onlinepngtools-2-180x180.png">
-            Portfolio
-        </a><br>
-        <a class="link link-facebook" href="https://www.facebook.com/fahim.rahman.582/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
-            Facebook
-        </a><br>
-        <a class="link link-instagram" href="https://www.instagram.com/fahim.rahman.582/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
-            Instagram
-        </a><br>
-        <a class="link link-youtube" href="https://www.youtube.com/@fahim582/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
-            YouTube
-        </a><br>
-        <a class="link link-twitter" href="https://www.twitter.com/Fahimrahman582/" target="_blank">
-            <img src="https://seeklogo.com/images/T/twitter-x-logo-0339F999CF-seeklogo.com.png?v=638264860180000000" alt="Twitter Logo">
-            &nbsp; &nbsp; &nbsp; X
-        </a><br>
-        
-        <a class="link link-telegram" href="https://t.me/fahim582/" target="_blank">
-            <img src="https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/telegram-512.png" alt="Telegram">
-            Telegram
-        </a><br>
-        <a class="link link-github" href="https://github.com/Fahimrahman582" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo">
-            GitHub
-        </a><br>
-        <a class="link link-whatsapp" href="https://wa.me/+8801834147344/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
-            WhatsApp
-        </a><br>
-        <a class="link link-email" href="mailto:fahimrahman582@gmail.com/" target="_blank">
-            <img src="https://www.freeiconspng.com/thumbs/email-icon/communication-email-2-icon-7.png" alt="Email">
-            Email
-        </a><br>
-        <a class="link link-phone" href="tel:+8801834147344" target="_blank">
-            <img src="https://cdn.pixabay.com/photo/2021/10/29/21/40/phone-icon-6753051_960_720.png" alt="Phone Num">
-            Call Me 
-        </a>
+    <div class="social-links">
+      <a class="social-link portfolio" href="https://fahimblogs.com" target="_blank" title="Portfolio">
+        <img src="cropped-output-onlinepngtools-2-180x180.png" alt="Portfolio">
+      </a>
+      <a class="social-link facebook" href="https://www.facebook.com/fahim.rahman.582/" target="_blank" title="Facebook">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+      </a>
+      <a class="social-link instagram" href="https://www.instagram.com/fahim.rahman.582/" target="_blank" title="Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+      <a class="social-link youtube" href="https://www.youtube.com/@fahim582/" target="_blank" title="YouTube">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+      </a>
+      <a class="social-link twitter" href="https://www.twitter.com/Fahimrahman582/" target="_blank" title="X (Twitter)">
+        <img src="https://seeklogo.com/images/T/twitter-x-logo-0339F999CF-seeklogo.com.png?v=638264860180000000" alt="X (Twitter)">
+      </a>
+      <a class="social-link telegram" href="https://t.me/fahim582/" target="_blank" title="Telegram">
+        <img src="https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/telegram-512.png" alt="Telegram">
+      </a>
+      <a class="social-link github" href="https://github.com/Fahimrahman582" target="_blank" title="GitHub">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+      </a>
+      <a class="social-link whatsapp" href="https://wa.me/+8801834147344/" target="_blank" title="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+      </a>
+      <a class="social-link email" href="mailto:fahimrahman582@gmail.com/" target="_blank" title="Email">
+        <img src="https://www.freeiconspng.com/thumbs/email-icon/communication-email-2-icon-7.png" alt="Email">
+      </a>
+      <a class="social-link phone" href="tel:+8801834147344" target="_blank" title="Call Me">
+        <img src="https://cdn.pixabay.com/photo/2021/10/29/21/40/phone-icon-6753051_960_720.png" alt="Phone">
+      </a>
     </div>
-</p>
-<form action="https://send.pageclip.co/api_buHEwz8HtONaEdeAzHYrIPIX9ims8O8E"
-      method="POST"
-      class="contact-form pageclip-form"
-      style="margin-bottom: 40px;">
-    <h2 style="text-align:center;color:#FF5733;">Contact Me Directly</h2>
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" required />
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required />
-    <button type="submit" class="pageclip-form__submit">
-        Send Message
-    </button>
-</form>
-<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <div class="contact-form-wrapper">
+      <h2>Contact Me Directly</h2>
+      <form 
+        action="https://send.pageclip.co/api_buHEwz8HtONaEdeAzHYrIPIX9ims8O8E"
+        method="POST"
+        class="pageclip-form"
+        autocomplete="off">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required placeholder="Your Name">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required placeholder="you@email.com">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" required placeholder="Type your message..."></textarea>
+        <button type="submit" class="pageclip-form__submit">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
 </html>
